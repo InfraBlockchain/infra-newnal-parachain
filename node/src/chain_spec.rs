@@ -280,10 +280,11 @@ fn urauth_genesis(
 		aura: Default::default(),
 		aura_ext: Default::default(),
 		parachain_system: Default::default(),
-		ibs_xcm: infra_newnal_parachain_runtime::IbsXcmConfig {
+		infra_xcm: infra_newnal_parachain_runtime::InfraXcmConfig {
 			safe_xcm_version: Some(SAFE_XCM_VERSION),
 			..Default::default()
 		},
+		data_market: Default::default(),
 		ur_auth: infra_newnal_parachain_runtime::URAuthConfig { oracle_members },
 		sudo: infra_newnal_parachain_runtime::SudoConfig { key: root_key },
 	}
